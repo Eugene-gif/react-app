@@ -1,9 +1,14 @@
 import './App.css';
+import Heading from './components/Heading/Heading';
+import Button from './components/Button/Button';
+import Paragraph from './components/Paragraph/Paragraph';
 
 function App() {
   return (
     <>
-      <h1>Проект на React</h1>
+      <Heading>Поиск</Heading>
+      <Button>Кнопка</Button>
+      <Paragraph fontSize={'20px'}>Какой-то параграф</Paragraph>
     </>
   );
 }
