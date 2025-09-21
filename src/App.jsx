@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header/Header';
+import Body from './components/Layouts/Body/Body';
 import Heading from './components/Heading/Heading';
 import Button from './components/Button/Button';
 import Paragraph from './components/Paragraph/Paragraph';
@@ -29,7 +30,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className='body'>
+      <Body>
         <Heading>Поиск</Heading>
         <Paragraph fontSize={'20px'}>Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.
         </Paragraph>
@@ -41,7 +42,7 @@ function App() {
         />
 
         <Input placeholder='Введите имя' inputChange={inputLogin} />
-      </div>
+      </Body>
     </>
   );
 }
