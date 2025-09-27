@@ -1,5 +1,5 @@
 import './Input.css';
-import IconSearch from '../../assets/IconSearch';
+import IconSearch from '../../assets/icons/IconSearch';
 import Button from '../Button/Button';
 
 function Input({ placeholder, inputChange, onClickSearch, isSearch = false }) {
