@@ -1,8 +1,8 @@
-import './Paragraph.css';
+import styles from './Paragraph.module.css';
 
 function Paragraph({ children, fontSize }) {
   return (
-    <p className='paragraph' style={{ fontSize: fontSize }}>{children}</p>
+    <p className={styles['paragraph']} style={{ fontSize: fontSize }}>{children}</p>
   );
 }
 

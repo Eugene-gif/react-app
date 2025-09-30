@@ -1,8 +1,8 @@
-import './Heading.css';
+import styles from './Heading.module.css';
 
 function Heading({ children }) {
   return (
-    <h1 className='heading'>{children}</h1>
+    <h1 className={styles.heading}>{children}</h1>
   );
 }
 

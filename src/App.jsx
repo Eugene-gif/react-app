@@ -1,8 +1,7 @@
 import './App.css';
 import Header from './components/Header/Header';
-import Body from './components/Layouts/Body/Body';
+import Body from './Layouts/Body/Body';
 import Heading from './components/Heading/Heading';
-import Button from './components/Button/Button';
 import Paragraph from './components/Paragraph/Paragraph';
 import Input from './components/Input/Input';
 import CardList from './components/CardList/CardList';

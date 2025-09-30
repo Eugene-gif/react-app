@@ -1,11 +1,11 @@
-import './CardList.css';
+import styles from './CardList.module.css';
 import CardItem from '../CardItem/CardItem';
 
 function CardList({ items }) {
   if (items.length === 0) return <p>Фильмов пока нет, добавьте первый</p>;
 
   return (
-    <div className='card-list'>
+    <div className={styles['card-list']}>
       {items.map((el) => (
         <CardItem
           key={el.id}
