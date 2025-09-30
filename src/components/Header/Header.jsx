@@ -1,6 +1,5 @@
 import styles from './Header.module.css';
 import Logo from '../../assets/Logo';
-console.log(Logo);
 
 function Header() {
   return (
