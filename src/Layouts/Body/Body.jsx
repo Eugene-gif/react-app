@@ -1,8 +1,8 @@
-import './Body.css';
+import style from './Body.module.css';
 
 function Body({ children }) {
   return (
-    <div className='body'>
+    <div className={style.body}>
       {children}
     </div>
   );

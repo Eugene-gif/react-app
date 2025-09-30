@@ -1,25 +1,24 @@
-import './Header.css';
+import styles from './Header.module.css';
 import Logo from '../../assets/Logo';
-console.log(Logo);
 
 function Header() {
   return (
-    <div className='header'>
-      <div className='header-wrapper'>
-        <Logo className='logo' />
-        <nav className='nav'>
-          <ul className='nav-list'>
-            <li className='nav-item'>
+    <div className={styles.header}>
+      <div className={styles['header-wrapper']}>
+        <Logo className={styles['logo']} />
+        <nav className={styles['nav']}>
+          <ul className={styles['nav-list']}>
+            <li className={styles['nav-item']}>
               <a href="">
                 Поиск фильмов
               </a>
             </li>
-            <li className='nav-item'>
+            <li className={styles['nav-item']}>
               <a href="">
                 Мои фильмы
               </a>
             </li>
-            <li className='nav-item'>
+            <li className={styles['nav-item']}>
               <a href="">
                 Войти
               </a>
