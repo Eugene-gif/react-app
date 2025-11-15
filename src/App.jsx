@@ -5,6 +5,7 @@ import Heading from './components/Heading/Heading';
 import Paragraph from './components/Paragraph/Paragraph';
 import Input from './components/Input/Input';
 import CardList from './components/CardList/CardList';
+import Login from './components/Login/Login';
 import Image1 from './assets/images/black-widow.webp';
 import Image2 from './assets/images/big-band-theory.webp';
 import Image3 from './assets/images/friends.webp';
@@ -110,10 +111,10 @@ function App() {
         </Paragraph>
         <Input placeholder='Введите название'
           inputChange={inputSearch}
-          onClickSearch={onClickSearch}
-          isSearch
+          onClickButtonSearch={onClickSearch}
         />
         <CardList items={films} />
+        <Login/>
       </Body>
     </>
   );

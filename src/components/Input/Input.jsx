@@ -3,16 +3,16 @@ import cn from 'classnames';
 import IconSearch from '../../assets/icons/IconSearch';
 import Button from '../Button/Button';
 
-function Input({ placeholder, inputChange, onClickSearch, isSearch = false }) {
+function Input({ placeholder, inputChange, onClickButtonSearch=null}) {
 
   return (
     <>
       <div className={styles['field-wrapper']}>
         <label className={cn({
           [styles['field']]: true,
-          [styles['field-search']]: isSearch
+          [styles['field-search']]: onClickButtonSearch
         })}>
-          <IconSearch className={styles['field-icon']} />
+          {onClickButtonSearch && <IconSearch className={styles['field-icon']} />}
           <input type="text"
             autoComplete="off"
             className={styles['field-input']}
@@ -20,7 +20,7 @@ function Input({ placeholder, inputChange, onClickSearch, isSearch = false }) {
             onChange={inputChange}
           />
         </label>
-        <Button text="Поиск" onClick={onClickSearch} />
+        {onClickButtonSearch && <Button text='Поиск' onClick={onClickButtonSearch} />}
       </div>
     </>
   );
