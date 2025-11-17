@@ -1,7 +1,10 @@
 import styles from './Header.module.css';
-import Logo from '../../assets/Logo';
+import Logo from '@/assets/Logo';
+import hasIsLogged from '@/utils/hasIsLogged';
+import getUserName from '@/utils/getUserName';
 
 function Header() {
+
   return (
     <div className={styles.header}>
       <div className={styles['header-wrapper']}>
@@ -18,11 +21,17 @@ function Header() {
                 Мои фильмы
               </a>
             </li>
-            <li className={styles['nav-item']}>
-              <a href="">
-                Войти
-              </a>
-            </li>
+            {hasIsLogged()
+              ? <li className={styles['nav-item']}>
+                <a href="#logout">
+                  {getUserName() || 'Без имени'}
+                </a>
+              </li>
+              : <li className={styles['nav-item']}>
+                <a href="#login-form">
+                  Войти
+                </a>
+              </li>}
           </ul>
         </nav>
       </div>

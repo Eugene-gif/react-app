@@ -5,6 +5,7 @@ import Heading from './components/Heading/Heading';
 import Paragraph from './components/Paragraph/Paragraph';
 import Input from './components/Input/Input';
 import CardList from './components/CardList/CardList';
+import Login from './components/Login/Login';
 import Image1 from './assets/images/black-widow.webp';
 import Image2 from './assets/images/big-band-theory.webp';
 import Image3 from './assets/images/friends.webp';
@@ -15,11 +16,6 @@ import Image7 from './assets/images/shang-chi.webp';
 import Image8 from './assets/images/two-and-a-half-men.webp';
 
 function App() {
-
-  const login = () => {
-    console.log('Логика входа в профиль');
-  }
-
   let inputSearchValue = '';
 
   const inputSearch = (evt) => {
@@ -29,10 +25,6 @@ function App() {
 
   const onClickSearch = () => {
     console.log('onClickSearch(): ', inputSearchValue);
-  }
-
-  const inputLogin = (evt) => {
-    console.log('inputLogin(evt): ', evt.target.value);
   }
 
   const films = [
@@ -110,10 +102,10 @@ function App() {
         </Paragraph>
         <Input placeholder='Введите название'
           inputChange={inputSearch}
-          onClickSearch={onClickSearch}
-          isSearch
+          onClickButtonSearch={onClickSearch}
         />
         <CardList items={films} />
+        <Login />
       </Body>
     </>
   );
