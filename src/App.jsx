@@ -16,11 +16,6 @@ import Image7 from './assets/images/shang-chi.webp';
 import Image8 from './assets/images/two-and-a-half-men.webp';
 
 function App() {
-
-  const login = () => {
-    console.log('Логика входа в профиль');
-  }
-
   let inputSearchValue = '';
 
   const inputSearch = (evt) => {
@@ -30,10 +25,6 @@ function App() {
 
   const onClickSearch = () => {
     console.log('onClickSearch(): ', inputSearchValue);
-  }
-
-  const inputLogin = (evt) => {
-    console.log('inputLogin(evt): ', evt.target.value);
   }
 
   const films = [
@@ -114,7 +105,7 @@ function App() {
           onClickButtonSearch={onClickSearch}
         />
         <CardList items={films} />
-        <Login/>
+        <Login />
       </Body>
     </>
   );
